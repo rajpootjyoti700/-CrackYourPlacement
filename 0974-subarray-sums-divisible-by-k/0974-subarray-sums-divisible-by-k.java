@@ -5,11 +5,12 @@ class Solution {
         //map nd traverse the array if we find the same remender twice means \
         // high length - to the length of upto 1st remender then remaining subaray
         // definately divisible by k 
-        int rem=0;
-        int sum=0;
-        HashMap<Integer,Integer> mp=new HashMap<>();
+        
+      int sum=0;
         int ans=0;
         int n=nums.length;
+        int rem=0;
+        HashMap<Integer,Integer> mp=new HashMap<>();
         mp.put(0,1);
         for(int i=0;i<n;i++){
             sum=sum+nums[i];
@@ -22,7 +23,6 @@ class Solution {
             }
             else
                 mp.put(rem,1);
-                
         }
         return ans;
     }
