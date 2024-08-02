@@ -1,5 +1,6 @@
 class Solution {
     public int minMoves2(int[] nums) {
+        // mathematical logic base qustio
        Arrays.sort(nums);
         int n=nums.length;
         int mid=nums[n/2];
