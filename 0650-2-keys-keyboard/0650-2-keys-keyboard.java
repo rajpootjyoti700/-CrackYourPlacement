@@ -1,18 +1,14 @@
 class Solution {
     public int minSteps(int n) {
-         if (n == 1) return 0;
-        
-        int steps = 0;
-        int factor = 2;
-        
-        while (n > 1) {
-            while (n % factor == 0) {
-                steps += factor;
-                n /= factor;
+        int fac=2;
+        int ans=0;
+        while(n>1){
+            while(n%fac==0){
+                ans=ans+fac;
+                n=n/fac;
             }
-            factor++;
+            fac++;
         }
-        
-        return steps;
+        return ans;
     }
 }
