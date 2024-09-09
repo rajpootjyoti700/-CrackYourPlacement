@@ -7,12 +7,15 @@ class Solution {
         int sum=0;
         for(int i=0;i<n;i++){
             sum=sum+nums[i];
-            if(mp.containsKey(sum-k))
+            if(mp.containsKey(sum-k)){
                 ans=ans+mp.get(sum-k);
-            if(mp.containsKey(sum))
+            }
+            if(mp.containsKey(sum)){
                 mp.put(sum,mp.get(sum)+1);
-            else
+            }
+            else{
                 mp.put(sum,1);
+            }
         }
         return ans;
     }
