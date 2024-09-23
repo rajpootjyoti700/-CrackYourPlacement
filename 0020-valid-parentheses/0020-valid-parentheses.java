@@ -7,22 +7,24 @@ class Solution {
         for(int i=0;i<n;i++)
         {
             if(arr[i]=='(' || arr[i]=='{' || arr[i]=='['){
-                st.push(arr[i]);
-            }
+                 st.push(arr[i]);
+             }
             else{
                 if(st.isEmpty())
                     return false;
-                else{
+               else{
                     
-                    if((arr[i]==')' && st.peek()=='(') || (arr[i]=='}' && st.peek()=='{') || (arr[i]==']' && st.peek()=='[') ){
+                   if((arr[i]==')' && st.peek()=='(') || (arr[i]=='}' && st.peek()=='{') || (arr[i]==']' && st.peek()=='[') ){
                         st.pop();
                     }
-                    else{
-                        return false;
-                    }
+                   else
+                       return false;
+                   
                 }
-            }
-        }
-            return st.isEmpty();
+           }
+       }
+           return st.isEmpty();
+        // the no of open bracket and close baracke should be same 
+        
         }
 }
